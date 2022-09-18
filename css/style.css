@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ededed;
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.app {
+    padding: 20px;
+    margin: 2%;
+    background-color: #fff;
+    
+}
+
+.container {
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.header {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.header .container,
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .header__logo img, .footer .footer__logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.header__cart  img{
+    width: 40px;
+    height: 40px;
+}
+
+.header__cart_count {
+    position: relative;
+    right: 16px;
+    top: 10px;
+}
+
+.header__nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+.header__nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.header__nav ul li a:hover {
+    color: white;
+    font-size: 23px;
+    background-color:  rgb(112, 107, 107);
+}
+
+.header__cart {
+    display: flex;
+    align-items: center;
+}
+
+.header__cart_count {
+    background-color: #000;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    color: #fff;
+
+    line-height: 18px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.header__cart_amount {
+    font-weight: bold;
+}
+
+.main {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.catalog__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.catalog__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(25% - 30px);
+    min-width: 200px;
+    border: 0.5px solid rgb(206, 205, 205);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.catalog__item:hover {
+    box-shadow: 0 0 25px rgba(0,1,0,0.5);
+}
+.catalog__item a {
+    text-decoration: none;
+    color: black;
+}
+
+.add_cart {
+    border: none;
+    background-color: white;
+    margin-top: auto;
+}
+
+.add_cart img {
+    width: 40px;
+    height: 40px; 
+    border: none;
+    cursor: pointer;
+}
+
+.catalog__item .image {
+    display: block;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+.catalog__item .image img {
+    max-width: 100%;
+    max-height: 150px;
+}
+
+.catalog__item .title {
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.catalog__item a:hover {
+   color: rgb(112, 107, 107);
+}
+
+.catalog__item .price {
+    font-weight: bold;
+    color: orange;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.product__description h1 {
+    font-size: 30px;
+    line-height: 32px;
+}
+
+.product__content {
+    display: flex;
+    gap: 30px;
+    
+}
+
+.product__description .add_cart {
+    width: 150px;
+    height: auto;
+    padding: 8px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #ff9600;
+    color: rgb(76, 75, 75);
+    cursor: pointer;
+    border-radius: 9px;
+    background: #ff9600;
+    margin-left: 300px;
+}
+
+.product__description .price {
+    color: #ff9600;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid grey;
+}
+
+.product__description .description {
+    padding: 10px 0;
+    border-bottom: 1px solid grey;
+    margin-bottom: 20px;
+}
+.add_cart:hover {
+    color: black;
+    box-shadow: 0 0 10px #ff9600;
+}
+
+.tooltiptext1, .tooltiptext2, .tooltiptext3 {
+    visibility: hidden;
+    width: 240px;
+    background-color: rgb(112, 107, 107);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+}
+.tooltiptext1 {
+   
+    /* Position the tooltip */
+    position: absolute;
+    top: 110px;
+    left: 500px;
+    
+}
+
+.tooltiptext2 {
+    /* Position the tooltip */
+    position: absolute;
+    top: 110px;
+    left: 600px;
+    
+}
+
+.tooltiptext3 {
+
+    /* Position the tooltip */
+    position: absolute;
+    top: 110px;
+    left: 715px;
+    
+}
+
+.tooltip:hover .tooltiptext1, .tooltip:hover .tooltiptext2, .tooltip:hover .tooltiptext3 {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext1::after, .tooltip .tooltiptext2::after, .tooltip .tooltiptext3::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent  rgb(112, 107, 107) transparent;
+}
