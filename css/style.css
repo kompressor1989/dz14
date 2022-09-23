@@ -274,3 +274,56 @@ p {
     border-style: solid;
     border-color: transparent transparent  rgb(112, 107, 107) transparent;
 }
+
+.cart__item {
+    display: flex;
+    justify-content: baseline;
+    gap: 30px;
+    align-items: center;
+    list-style: none;
+    padding: 10px 0;
+    border-bottom: 1px solid grey;
+}
+
+.cart__item a {
+    text-decoration: none;
+    color: black;
+}
+
+.cart__item .remove {
+    margin-left: auto;
+}
+
+.cart__item input {
+height: 30px;
+font-size: 18px;
+border-radius: 5px;
+text-align: center;
+cursor: pointer;
+}
+
+.cart__item input:hover{
+   box-shadow:0 0 4px rgba(0,0,0,0.5) 
+}
+
+.cart__item .remove {
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.cart__item .remove:hover{
+    cursor: pointer;
+    background-color: red;
+    border: red;
+    box-shadow:0 0 4px rgba(0,0,0,0.5) 
+}
+
+.cart__total {
+    margin-top: 30px;
+    color: #ff9600;
+    font-weight: bold;
+    text-transform: uppercase;
+    word-spacing: 8px;
+}

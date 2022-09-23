@@ -34,7 +34,7 @@ class Page {
             liElem.innerHTML = `
                 <a class="image" href="/#product/${product.id}"><img src="${product.image}"></a>
                 <h3 class="title"><a href="/#product/${product.id}">${product.title}</a></h3>
-                <div class="price">$${product.price}</div>
+                <div class="price">$ ${product.price}</div>
             `;
 
             const btnCart = document.createElement('button');
